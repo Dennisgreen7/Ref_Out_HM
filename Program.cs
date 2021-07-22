@@ -21,7 +21,7 @@ namespace Ref_Out_HM
                 erormessege = "name or last name are empty";
                 return erormessege;
             }
-            if(phone_num[0] != '0')
+            if(phone_num[0] != '0'||phone_num.Length < 9)
             {
                 erormessege = " phone number must start with 0";
                 return erormessege;
