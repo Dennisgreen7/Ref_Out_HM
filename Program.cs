@@ -16,7 +16,7 @@ namespace Ref_Out_HM
         public static string ValidateValues(string name_,string last_name,string phone_num,string tz,int age, out string erormessege)
         {
             erormessege = "";
-            if(name_ == "" ||name_ == ""null|| last_name == ""|| last_name == null)
+            if(String.IsNullOrEmpty(name_)|| String.IsNullOrEmpty(last_name))
             {
                 erormessege = "name or last name are empty";
                 return erormessege;
