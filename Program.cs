@@ -13,7 +13,7 @@ namespace Ref_Out_HM
             Console.WriteLine("Enter num");
             num = int.Parse(Console.ReadLine());
         }
-        public static string ValidateValues(string name_,string last_name,string phone_num,string tz,int age, out string erormessege)
+        public static bool ValidateValues(string name_,string last_name,string phone_num,string tz,int age, out string erormessege)
         {
             erormessege = "";
             if(String.IsNullOrEmpty(name_)|| String.IsNullOrEmpty(last_name))
@@ -37,7 +37,7 @@ namespace Ref_Out_HM
 
                 return erormessege;
             }
-            return "True";
+            return String.IsNullOrEmpty(erormessege);
         }
         static void Main(string[] args)
         {
