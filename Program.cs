@@ -18,22 +18,22 @@ namespace Ref_Out_HM
             erormessege = "";
             if(String.IsNullOrEmpty(name_)|| String.IsNullOrEmpty(last_name))
             {
-                erormessege = "name or last name are empty";
+                erormessege += "name or last name are empty";
                 return erormessege;
             }
             if(phone_num[0] != '0'||phone_num.Length < 9)
             {
-                erormessege = " phone number must start with 0";
+                erormessege += " phone number must start with 0";
                 return erormessege;
             }
             if(tz.Length != 9)
             {
-                erormessege = " tz must be 9 digits";
+                erormessege += " tz must be 9 digits";
                 return erormessege;
             }
             if(age < 1 || age > 120)
             {
-                erormessege = "age out of rage 1-120";
+                erormessege += "age out of rage 1-120";
 
                 return erormessege;
             }
